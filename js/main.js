@@ -14,17 +14,19 @@ console.log("Il prezzo al km è di: ", prezzoAlKm);
 
 //tolgo dal prezzo lo sconto
 if (etaPasseggero < 18) {
-    let prezzoTotale = (prezzoAlKm * 20) / 100;
+    let prezzoSconto = (prezzoAlKm * 20) / 100;
+    let prezzoTotale = (prezzoAlKm - prezzoSconto)
     prezzoTotale = prezzoTotale.toFixed(2)
     console.log("Il prezzo finale è di: ", prezzoTotale);
     alert(`Il prezzo totale è di: ${prezzoTotale}`);
 } else if (etaPasseggero >= 18 && etaPasseggero < 65) {
-    let prezzoTotale = prezzoAlKm;
+    let prezzoSconto = prezzoAlKm;
     prezzoTotale = prezzoTotale.toFixed(2)
     console.log("Il prezzo finale è di: ", prezzoTotale);
     alert(`Il prezzo totale è di: ${prezzoTotale}`);
 }else{
-    let prezzoTotale = (prezzoAlKm * 40) / 100;
+    let prezzoSconto = (prezzoAlKm * 40) / 100;
+    let prezzoTotale = (prezzoAlKm - prezzoSconto)
     prezzoTotale = prezzoTotale.toFixed(2)
     console.log("Il prezzo finale è di: ", prezzoTotale);
     alert(`Il prezzo totale è di: ${prezzoTotale}`);
